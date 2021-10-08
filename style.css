@@ -1,41 +1,528 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
-.container{
-    max-width: 1140px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
 }
-.baha{
-    background-color: burlywood;
+
+.baha {
+  background-color: burlywood;
 }
-.baha_blok{
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+
+.baha_blok {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
-.baha_logo{
-    color: brown;
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-    
-    text-transform: uppercase;
+
+.baha_logo {
+  color: brown;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+
+  text-transform: uppercase;
 }
-.baha_list{
-    display: flex;
-    
+
+.baha_list {
+  display: flex;
+
 }
-.baha_link{
-    color: crimson;
-    font-size: 20px;
-    margin-right: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: capitalize;
+
+.baha_link {
+  color: crimson;
+  font-size: 20px;
+  margin-right: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+}
+
+.fayz {
+  position: relative;
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(90deg, #4AC29A, #BDFFF3);
+  text-shadow: 0 10px 13px #333;
+  color: #222;
+  z-index: 1;
+}
+
+.fayz__title {
+  font-size: 5rem;
+  position: relative;
+  z-index: -1;
+}
+
+.fayz__title::after {
+  content: 'Hi';
+  font-size: 20rem;
+  position: absolute;
+  top: -100px;
+  left: 30%;
+  color: rgba(255, 255, 255, 0.4);
+  z-index: -99;
+}
+
+.fayz__small {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.fayz__h3 {
+  font-size: 2rem;
+}
+
+.fayz__list {
+  padding-left: 20px;
+  font-size: 1.3rem;
+}
+
+.fayz__list li {
+  position: relative;
+  width: fit-content;
+}
+
+.fayz__mention {
+  width: fit-content;
+  height: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 0.8rem;
+  background-color: purple;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  right: -45px;
+}
+
+.animations{
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+}
+
+.penguin {
+  position: relative;
+  display: block;
+  margin-top: 5%;
+  width: 300px;
+  height: 300px;
+}
+
+.right-cheek {
+  top: 15%;
+  left: 35%;
+  background: white;
+  width: 60%;
+  height: 70%;
+  border-radius: 70% 70% 60% 60%;
+}
+
+.left-cheek {
+  top: 15%;
+  left: 5%;
+  background: white;
+  width: 60%;
+  height: 70%;
+  border-radius: 70% 70% 60% 60%;
+}
+
+.belly {
+  top: 60%;
+  left: 2.5%;
+  background: white;
+  width: 95%;
+  height: 100%;
+  border-radius: 120% 120% 100% 100%;
+}
+
+.penguin-top {
+  top: 10%;
+  left: 25%;
+  background: black;
+  width: 50%;
+  height: 45%;
+  border-radius: 70% 70% 60% 60%;
+}
+
+.penguin-bottom {
+  top: 40%;
+  left: 23.5%;
+  background: black;
+  width: 53%;
+  height: 45%;
+  border-radius: 70% 70% 100% 100%;
+}
+
+.right-hand {
+  top: 5%;
+  left: 25%;
+  background: black;
+  width: 30%;
+  height: 60%;
+  border-radius: 30% 30% 120% 30%;
+  transform: rotate(130deg);
+  z-index: -1;
+  animation-duration: 3s;
+  animation-name: wave;
+  animation-iteration-count: infinite;
+  transform-origin: 0% 0%;
+  animation-timing-function: linear;
+}
+
+@keyframes wave {
+  10% {
+    transform: rotate(110deg);
+  }
+
+  20% {
+    transform: rotate(130deg);
+  }
+
+  30% {
+    transform: rotate(110deg);
+  }
+
+  40% {
+    transform: rotate(130deg);
+  }
+}
+
+.left-hand {
+  top: 0%;
+  left: 75%;
+  background: black;
+  width: 30%;
+  height: 60%;
+  border-radius: 30% 30% 30% 120%;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+.right-feet {
+  top: 85%;
+  left: 60%;
+  background: orange;
+  width: 15%;
+  height: 30%;
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(-80deg);
+  z-index: -2222;
+}
+
+.left-feet {
+  top: 85%;
+  left: 25%;
+  background: orange;
+  width: 15%;
+  height: 30%;
+  border-radius: 50% 50% 50% 50%;
+  transform: rotate(80deg);
+  z-index: -2222;
+}
+
+.right-eye {
+  top: 45%;
+  left: 60%;
+  background: black;
+  width: 15%;
+  height: 17%;
+  border-radius: 50%;
+}
+
+.left-eye {
+  top: 45%;
+  left: 25%;
+  background: black;
+  width: 15%;
+  height: 17%;
+  border-radius: 50%;
+}
+
+.sparkle {
+  top: 25%;
+  left: -23%;
+  background: white;
+  width: 150%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.blush-right {
+  top: 65%;
+  left: 15%;
+  background: pink;
+  width: 15%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.blush-left {
+  top: 65%;
+  left: 70%;
+  background: pink;
+  width: 15%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.beak-top {
+  top: 60%;
+  left: 40%;
+  background: orange;
+  width: 20%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.beak-bottom {
+  top: 65%;
+  left: 42%;
+  background: orange;
+  width: 16%;
+  height: 10%;
+  border-radius: 50%;
+}
+
+.penguin * {
+  position: absolute;
+  z-index: 9999;
+}
+
+.car_container {
+  position: relative;
+}
+
+.carAnimation {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  background-color: #83c5be;
+  border-radius:50%;
+}
+
+.road {
+  position: absolute;
+  background-color: #333;
+  border-radius:20px;
+  height:5px;
+  width:220px;
+  top:220px;
+  left:40px;
+  overflow:hidden;
+}
+
+.road:before {
+  content:"";
+  position: absolute;
+  background-color: #83c5be;
+  width:30px;
+  height:5px;
+  border-radius:5px; 
+  animation: move 1s linear infinite reverse;
+}
+
+@keyframes move {  
+  from { left: -100px; }
+    to { left: 200px; }
+}
+
+.road:after {
+  content:"";
+  position: absolute;
+  width:15px;
+  height:5px;
+  background-color: #333;
+  border-radius:5px; 
+  box-shadow: 27px 0 #333;
+  animation: move 1s linear infinite reverse;
+}
+
+.car {
+  position: absolute;
+  height:0;
+  width:130px;
+  border-right: 25px solid transparent;
+  border-left: 20px solid transparent;
+  border-bottom: 70px solid #333;
+  z-index:2;
+  top:140px;
+  left:75px;  
+}
+
+.car:before {
+  content:"";
+  position: absolute;
+  background-color: #333;
+  width:70px;
+  height:40px;
+  left:60px;
+  top:30px;
+}
+
+.car:after {
+  content:"";
+  position: absolute; 
+  background-color: #333;
+  width:10px;
+  height:35px;
+  border-radius:10px;
+  left:-22px;
+  top:20px;
+  transform: rotate(16deg);
+}
+
+.colour {
+  position: absolute;
+  height:0;
+  width:113px;
+  border-right: 20px solid transparent;
+  border-left: 17.5px solid transparent;
+  border-bottom: 60px solid #6190E8;
+  top:5px;
+  left:-12px;
+}
+
+.colour:before {
+  content:"";
+  position: absolute; 
+  background-color: #6190E8;
+  width:60px;
+  height:30px;
+  left:60px;
+  top:30px;
+}
+
+.colour:after {
+  position: absolute;
+  content:"";
+  background-color: #f9c74f;
+  width:5px;
+  height:15px;
+  border: 3px solid #333;
+  left:122px;
+  top:44.5px;
+  box-shadow: 0px -19px #333;
+}
+
+.windows {
+  position: absolute; 
+  height:0;
+  width:82px;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  border-bottom: 28px solid #333;
+  top:8px;
+  left:4px;
+}
+
+.windows:before {
+  content:"";
+  position: absolute;
+  height:0;
+  width:63px;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-bottom: 22px solid #aed9e0;
+  top:3px;
+  left:-2.5px;
+}
+
+.windows:after {
+  content:"";
+  position: absolute;
+  width:5px;
+  height:25px;
+  background-color: #333;
+  left:45px;
+  box-shadow: -25px 0 #333;
+}
+
+.leftWheel {
+  position: absolute;
+  width:35px;
+  height:15px;
+  border: 3px solid #333;
+  background-color: #d3d3d3;
+  border-radius: 30px 30px 0 0;
+  top:50px;
+  left:-5px;
+}
+
+.rightWheel {
+  position: absolute;
+  width:35px;
+  height:15px;
+  border: 3px solid #333;
+  background-color: #d3d3d3;
+  border-radius: 30px 30px 0 0;
+  top:50px;
+  left:75px;
+}
+
+.wheel {
+  position: absolute;
+  border-radius:50%;
+  width:30px;
+  height:30px;
+  background-color: #d3d3d3;
+  border: 8px solid #333;
+  box-shadow: inset 5px 5px #f5f3f4;
+  top:2px;
+  left:0px;
+  animation: spin .5s infinite linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.clouds {
+  position: absolute;
+  background-color: rgba(255,255,255,0.5);
+  width:35px;
+  height:10px;
+  border-radius: 20px;
+  top:100px;
+  left:100px;
+  z-index:1;
+  box-shadow: 130px 50px rgba(255,255,255,0.5), -100px 20px rgba(255,255,255,0.5);
+  animation: cloud 1.5s linear infinite reverse;
+}
+
+@keyframes cloud {  
+  from{ 
+    left:-150px; 
+  }
+  to{ 
+    left: 400px; 
+  }
+}
+
+@media(max-width: 1500px) {
+  .animations {
+    width: fit-content;
+  }
 }
